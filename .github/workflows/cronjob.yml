@@ -1,7 +1,9 @@
 name: Github Action with a cronjob trigger
 on:
   schedule:
-    - cron: "0 0 * * *"
+   # 每天国际时间 17:20 运行一次, 中国时间 01:20
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   cronjob-based-github-action:
